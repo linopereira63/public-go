@@ -45,7 +45,7 @@ func PostHash(d *data.Data) http.Handler {
     go d.ComputeHash(jobId, string(sVal[1]))
 
     // Write the response, the jobId
-    w.WriteHeader(http.StatusOK)
+    w.WriteHeader(http.StatusCreated)
     fmt.Fprintf(w, "%d", jobId)
 
     // Record the hash time

@@ -18,7 +18,7 @@ type StatsResponse struct {
   Average int64     `json:"average"`
 }
 
-// Returns a createe and populated JSON StatsResponse
+// Returns a created and populated JSON StatsResponse
 func getStatsResponse(d *data.Data) []byte {
 
   t, a := d.GetStats()
